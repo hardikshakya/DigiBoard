@@ -7,6 +7,8 @@
         "no-console": "off",
         "func-names": "off",
         "no-process-exit": "off",
-        "class-methods-use-this": "off"
+        "class-methods-use-this": "off",
+        "import/no-dynamic-require": "off",
+        "strict": "off"
     }
 }

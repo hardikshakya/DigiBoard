@@ -6,6 +6,7 @@ const l10n = require('jm-ez-l10n');
 
 const logger = require('./helper/logger.js');
 const apiRoute = require('./routes');
+const db = require('./models');
 
 require('dotenv').config();
 
@@ -22,6 +23,8 @@ app.use(bodyParser.json({ limit: '1gb' }));
 app.use(cors());
 app.use('/api', apiRoute);
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
     logger.info(`Express server listening on port ${PORT}`);
+    await db.sequelize.authenticate();
+    logger.info(`Database Connected!`);
 });

@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Hardik Shakya",
@@ -19,7 +20,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.0.0",
-    "prettier": "^2.2.0"
+    "prettier": "^2.2.0",
+    "sequelize-cli": "^6.2.0"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -28,6 +30,10 @@
     "express": "^4.17.1",
     "jm-ez-l10n": "^1.0.0",
     "morgan": "^1.10.0",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5",
+    "uuidv4": "^6.2.5",
     "winston": "^3.3.3"
   }
 }
