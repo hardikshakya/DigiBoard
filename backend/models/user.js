@@ -37,7 +37,11 @@ module.exports = (sequelize, DataTypes) => {
             forgot_password_code: DataTypes.STRING,
             password_updated_at: DataTypes.DATE,
             forgot_password_reset_password_at: DataTypes.DATE,
-            is_active: DataTypes.STRING,
+            is_active: {
+                type: DataTypes.BOOLEAN,
+                allowNull: false,
+                defaultValue: false,
+            },
             verification_string: DataTypes.STRING,
         },
         {

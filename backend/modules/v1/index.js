@@ -15,6 +15,7 @@ router.use((req, res, next) => {
 
 // Routes
 router.use('/', require('./home/homeRoute'));
+router.use('/auth', require('./auth/authRoute'));
 
 router.all('/*', (req, res) => {
     logger.error('Error Log');

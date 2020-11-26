@@ -41,7 +41,9 @@ module.exports = {
                 type: Sequelize.DATE,
             },
             is_active: {
-                type: Sequelize.STRING,
+                type: Sequelize.BOOLEAN,
+                allowNull: false,
+                defaultValue: false,
             },
             verification_string: {
                 type: Sequelize.STRING,

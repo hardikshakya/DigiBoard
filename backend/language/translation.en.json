@@ -1,3 +1,12 @@
 {
-    "TRY_AGAIN": "Some Error Occured"
+    "SUCCESS": "Success",
+    "TRY_AGAIN": "Some Error Occured",
+
+    "ERR_FIRSTNAME_REQUIRED": "User first name is required",
+    "ERR_LASTNAME_REQUIRED": "User last name is required",
+    "ERR_VALID_EMAIL": "Valid Email address is required",
+    "ERR_PASSWORD_REQUIRED": "Password is required",
+    "ERR_VALID_ROLE": "Valid User role is required",
+
+    "ERR_EMAIL_ALREADY_EXIST": "E-Mail exists already, please pick a different one"
 }

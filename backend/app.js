@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 const l10n = require('jm-ez-l10n');
 
 const logger = require('./helper/logger.js');
-const apiRoute = require('./routes');
 const db = require('./models');
 
 require('dotenv').config();
@@ -21,7 +20,7 @@ app.use(bodyParser.urlencoded({ limit: '1gb', extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.json({ limit: '1gb' }));
 app.use(cors());
-app.use('/api', apiRoute);
+app.use('/api', require('./routes'));
 
 app.listen(PORT, async () => {
     logger.info(`Express server listening on port ${PORT}`);
