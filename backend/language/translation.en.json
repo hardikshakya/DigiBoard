@@ -7,6 +7,13 @@
     "ERR_VALID_EMAIL": "Valid Email address is required",
     "ERR_PASSWORD_REQUIRED": "Password is required",
     "ERR_VALID_ROLE": "Valid User role is required",
+    "ERR_PASSWORD_IS_NOT_MATCHED": "Password does not match",
+    "ERR_TOKEN_NOT_FOUND": "Please provide authorization token in header",
 
-    "ERR_EMAIL_ALREADY_EXIST": "E-Mail exists already, please pick a different one"
+    "ERR_EMAIL_ALREADY_EXIST": "E-Mail exists already, please pick a different one",
+    "ERR_USER_NOT_FOUND": "User does not exists",
+    "ERR_USER_NOT_ACTIVE": "User is not active",
+    "ERR_NOT_VALID_VERIFICATION_URL": "Please Login with valid verification url",
+
+    "MSG_LOGIN_SUCCESS": "Logged in successfully"
 }

@@ -23,4 +23,14 @@ authMiddleware.signUpValidator = () => {
     ];
 };
 
+// Validate login api request body
+authMiddleware.logInValidator = () => {
+    return [
+        check('email', l10n.t('ERR_VALID_EMAIL')).isEmail().normalizeEmail(),
+        check('password', l10n.t('ERR_PASSWORD_REQUIRED')).exists({
+            checkFalsy: true,
+        }),
+    ];
+};
+
 module.exports = authMiddleware;

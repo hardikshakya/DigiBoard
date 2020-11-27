@@ -16,4 +16,28 @@ authService.createNewUser = async (reqObj) => {
     }
 };
 
+// Validate User's Verification String
+authService.validateVerificationString = async (userId) => {
+    try {
+        await Model.User.update(
+            {
+                verification_string: null,
+            },
+            {
+                where: {
+                    id: userId,
+                },
+            }
+        );
+
+        return;
+    } catch (error) {
+        logger.error(
+            '[ERROR] From validateVerificationString in authService: ',
+            error
+        );
+        throw new Error(error);
+    }
+};
+
 module.exports = authService;

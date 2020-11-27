@@ -16,4 +16,13 @@ const userSignupMiddlewares = [
 ];
 authRouter.post('/signup', userSignupMiddlewares);
 
+// User Login
+const userLoginMiddlewares = [
+    authMiddleware.logInValidator(),
+    validationHandler,
+    userMiddleware.isUserExistsOrNot,
+    authController.logIn,
+];
+authRouter.post('/login', userLoginMiddlewares);
+
 module.exports = authRouter;
