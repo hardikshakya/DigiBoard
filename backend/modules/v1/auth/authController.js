@@ -14,19 +14,10 @@ authController.signUp = async (req, res) => {
 
         req.body.password = encPassword;
 
-        const result = await authService.createNewUser(req.body);
-        const token = jwt.sign(
-            {
-                userId: result.id,
-            },
-            process.env.JWT_PRIVATE_KEY
-        );
+        await authService.createNewUser(req.body);
 
-        delete result.password;
         return res.status(STANDARD.SUCCESS).json({
             message: req.t('SUCCESS'),
-            data: result,
-            token,
             code: STANDARD.SUCCESS,
         });
     } catch (error) {
